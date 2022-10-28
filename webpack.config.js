@@ -5,12 +5,12 @@ module.exports = {
     watch: true,
     entry: './src/main.js',
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './bin'),
         filename: 'bundle.js'
     },
     devServer: {
         static: {
-            directory: path.resolve(__dirname, './dist')
+            directory: path.resolve(__dirname, './bin')
         }
     },
     module: {
@@ -31,6 +31,6 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.jsx', '.js'],
+        extensions: ['.jsx', '.js', '.sass'],
     }
 }
