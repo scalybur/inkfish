@@ -1,0 +1,35 @@
+{
+  "name": "inkfish",
+  "version": "1.0.0",
+  "description": "a contributors visualizator",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack --mode production --progress --hide-modules",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scalybur/inkfish.git"
+  },
+  "keywords": [
+    "github"
+  ],
+  "author": "nc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scalybur/inkfish/issues"
+  },
+  "homepage": "https://github.com/scalybur/inkfish#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "babel-loader": "^9.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
