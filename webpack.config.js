@@ -7,6 +7,7 @@ module.exports = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, './bin'),
+        publicPath: "./public",
         filename: 'bundle.js'
     },
     devServer: {
@@ -31,12 +32,13 @@ module.exports = {
             }
         ],
     },
+    
     resolve: {
         extensions: ['.jsx', '.js', '.sass'],
     },
     plugins: [
         new CopyPlugin(
-            { patterns: [{ from: "./public", to: "/" }] }
+            { patterns: [{ from: path.resolve(__dirname, "public"), to: path.resolve(__dirname, "bin") }] }
         )
     ]
 }
