@@ -12,7 +12,7 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.resolve(__dirname, './bin')
+            directory: path.resolve(__dirname, 'public')
         }
     },
     module: {
@@ -23,7 +23,7 @@ module.exports = {
                 use: { loader: 'babel-loader', }
             },
             {
-                test: /\.s.[ac]ss$/i,
+                test: /\.s[ac]ss$/i,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -32,13 +32,13 @@ module.exports = {
             }
         ],
     },
-    
     resolve: {
-        extensions: ['.jsx', '.js', '.sass'],
+        extensions: ['.jsx', '.js', '.json', '.html', '.sass', '.scss', '.css'],
     },
     plugins: [
         new CopyPlugin(
             { patterns: [{ from: path.resolve(__dirname, "public"), to: path.resolve(__dirname, "bin") }] }
         )
-    ]
+    ],
+    
 }
